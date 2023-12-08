@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cn.dancingsnow.disable_vanilla_tool.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "DisableVanillaTool.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
