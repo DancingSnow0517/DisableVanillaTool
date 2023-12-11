@@ -20,12 +20,12 @@ public class Config {
     private static final ForgeConfigSpec.ConfigValue<List<? extends String>> TOOL_LIST = BUILDER
             .comment("A tool list to disable.", "Default values: all vanilla tools")
             .define("tool_list", Arrays.asList(
-                    "minecraft:wooden_shovel", "minecraft:wooden_pickaxe", "minecraft:wooden_axe", "minecraft:wooden_hoe",
-                    "minecraft:stone_shovel", "minecraft:stone_pickaxe", "minecraft:stone_axe", "minecraft:stone_hoe",
-                    "minecraft:iron_shovel", "minecraft:iron_pickaxe", "minecraft:iron_axe", "minecraft:iron_hoe",
-                    "minecraft:golden_shovel", "minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_hoe",
-                    "minecraft:diamond_shovel", "minecraft:diamond_pickaxe", "minecraft:diamond_axe", "minecraft:diamond_hoe",
-                    "minecraft:netherite_shovel", "minecraft:netherite_pickaxe", "minecraft:netherite_axe", "minecraft:netherite_hoe"
+                    "minecraft:wooden_shovel", "minecraft:wooden_pickaxe", "minecraft:wooden_axe", "minecraft:wooden_hoe", "minecraft:wooden_sword",
+                    "minecraft:stone_shovel", "minecraft:stone_pickaxe", "minecraft:stone_axe", "minecraft:stone_hoe", "minecraft:stone_sword",
+                    "minecraft:iron_shovel", "minecraft:iron_pickaxe", "minecraft:iron_axe", "minecraft:iron_hoe", "minecraft:iron_sword",
+                    "minecraft:golden_shovel", "minecraft:golden_pickaxe", "minecraft:golden_axe", "minecraft:golden_hoe", "minecraft:golden_sword",
+                    "minecraft:diamond_shovel", "minecraft:diamond_pickaxe", "minecraft:diamond_axe", "minecraft:diamond_hoe", "minecraft:diamond_sword",
+                    "minecraft:netherite_shovel", "minecraft:netherite_pickaxe", "minecraft:netherite_axe", "minecraft:netherite_hoe", "minecraft:netherite_sword"
             ), Config::validateItemName);
 
     static final ForgeConfigSpec SPEC = BUILDER.build();

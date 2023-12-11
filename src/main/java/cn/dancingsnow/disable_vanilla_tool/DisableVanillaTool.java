@@ -2,6 +2,7 @@ package cn.dancingsnow.disable_vanilla_tool;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -21,9 +22,14 @@ public class DisableVanillaTool {
     }
 
     @SubscribeEvent
-    public void onPlayerLeftBlock(PlayerInteractEvent.LeftClickBlock event) {
-        event.setCanceled(Config.tool_list.contains(event.getItemStack().getItem()));
+    public void onPlayerLeftBlock(PlayerInteractEvent event) {
+        if (event.isCancelable())
+            event.setCanceled(Config.tool_list.contains(event.getItemStack().getItem()));
     }
 
+    @SubscribeEvent
+    public void onPlayerAttackEntity(AttackEntityEvent event) {
+        event.setCanceled(Config.tool_list.contains(event.getEntity().getMainHandItem().getItem()));
+    }
 
 }
